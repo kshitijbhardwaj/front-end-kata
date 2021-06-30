@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "front-end-kata"
+    }
+  },
+  "defaultProject": "front-end-kata",
+  "cli": {
+    "analytics": false
+  }
 }
