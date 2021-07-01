@@ -1,13 +1,14 @@
 <p>
-  <label>Add an item:</label>
-  <input data-test="assembly-add-item" type="text" (keyup)="readTasks($event)">
+  <label>Add an item:&nbsp;</label>
+  <input data-test="assembly-add-item" #addItem class="add-item" type="text"
+         (keydown.enter)="readTasks($event);addItem.value=''">
 </p>
 <div class="stages">
   <div *ngFor="let stage of stages; let i = index" data-test="assembly-stage" class="stage-item">
     {{stage}}
     <div *ngFor="let item of items[stage]; let y = index">
-      <button class="btn-idea" data-test="assembly-item" (contextmenu)="onRightClick($event, item, stage, i, y)" (click)="onLeftClick(item, stage, i, y)">{{item}}</button>
+      <button class="btn-idea" data-test="assembly-item" (contextmenu)="onRightClick($event, item, stage, i, y)"
+              (click)="onLeftClick(item, stage, i, y)">{{item}}</button>
     </div>
   </div>
 </div>
-
