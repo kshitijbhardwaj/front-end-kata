@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'assemblyline',
   templateUrl: './assemblyline.component.html',
-  styleUrls: ['./assemblyline.component.scss']
+  styleUrls: ['./assemblyline.component.css']
 })
 export class AssemblyLineComponent implements OnInit {
   @Input() stages: string[];

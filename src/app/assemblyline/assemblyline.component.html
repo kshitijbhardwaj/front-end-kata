@@ -6,8 +6,8 @@
 <div class="stages">
   <div *ngFor="let stage of stages; let i = index" data-test="assembly-stage" class="stage-item">
     {{stage}}
-    <div *ngFor="let item of items[stage]; let y = index">
-      <button class="btn-idea" data-test="assembly-item" (contextmenu)="onRightClick($event, item, stage, i, y)"
+    <div *ngFor="let item of items[stage]; let y = index" data-test="assembly-item" >
+      <button class="btn-idea" (contextmenu)="onRightClick($event, item, stage, i, y)"
               (click)="onLeftClick(item, stage, i, y)">{{item}}</button>
     </div>
   </div>

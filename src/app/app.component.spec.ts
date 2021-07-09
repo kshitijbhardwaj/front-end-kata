@@ -1,7 +1,7 @@
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentFixture, async } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ConfigureFn, configureTests } from '../lib/testing';
+import { ConfigureFn, configureTests } from '../lib/testing/config.helper';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
