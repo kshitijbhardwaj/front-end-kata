@@ -19,7 +19,7 @@ export class AssemblyLineComponent implements OnInit {
   readTasks(event: any): void {
     const firstStage = this.stages[0];
     if (event.target && event.target.value) {
-      this.items[firstStage].push(event.target.value);
+      this.items[firstStage].unshift(event.target.value);
     }
   }
 
@@ -39,7 +39,7 @@ export class AssemblyLineComponent implements OnInit {
       this.items[stage].splice(itemIndex, 1);
     } else {
       const nextStage = this.stages[stageIndex + 1];
-      this.items[nextStage].push(item);
+      this.items[nextStage].unshift(item);
       this.items[stage].splice(itemIndex, 1);
     }
   }
